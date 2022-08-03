@@ -1,0 +1,11 @@
+function sevenBoom (checkSeven){
+    let arrToString = checkSeven.toString();
+
+    if(arrToString.includes(7)){
+        return 'BOOM!';
+    } else{
+        return 'there is no 7 in the array.';
+    }
+}
+let checkSeven = [0, 1, 3, 9, 7];
+console.log(sevenBoom(checkSeven));
