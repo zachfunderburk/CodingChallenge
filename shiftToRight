@@ -1,0 +1,8 @@
+
+function shiftToRight (x,y)
+{
+    let z = 2 ** y;
+    let r = Math.round(x/z);
+    return r;
+}
+console.log(shiftToRight(3777, 6))
