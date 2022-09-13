@@ -1,0 +1,16 @@
+let arr = [1, 2, 3, 5];
+
+function checkSum (array)
+{
+    let sum = array.reduce((partialSum, a) => partialSum + a, 0);
+    if(sum % 2 == 1)
+    {
+        return "Oddish";
+    }
+    else
+    {
+        return "Evenish";
+    }
+}
+
+console.log(checkSum(arr));
