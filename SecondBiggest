@@ -1,0 +1,23 @@
+function nextBiggest(arr) {
+  let max = -Infinity, result = -Infinity;                  //Set max number and result number to lowest possible int
+
+  for (const value of arr) {
+    const nr = Number(value)                                //convert array values into integers
+
+    if (nr > max) {                                         //check to see if NR value is greater than Max
+      max = nr;    //new biggest                            //if greater, set max to current int
+    } else if (nr < max && nr > result) {                   //if current NR is not greater than max, check to see if it's greater than Result
+      result = nr; // new second biggest                    //if greater than Result, set result value to current NR
+    }
+  }                                                         //max will be set to the Highest value in array, result will be set to second highest value
+
+  return result;
+}
+
+var arr1 = ['20','120','111'];
+var arr2 = ['17', '290', '18'];
+var arr3 = ['210', '300', '210'];
+
+console.log(nextBiggest(arr1));
+console.log(nextBiggest(arr2));
+console.log(nextBiggest(arr3));
