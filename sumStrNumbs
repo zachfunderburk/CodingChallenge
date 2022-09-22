@@ -1,0 +1,20 @@
+function stringNumSum (str)
+{
+    
+    //numb = numb.join("");
+    var numb = str.match(/\d+/)[0]                  //Remove non numbers
+    
+    var sum = 0;
+    while (numb)
+    {
+        sum += numb % 10;
+        numb = Math.floor(numb / 10);
+    }
+    return sum;
+}
+
+var str1 = 'abd123def';
+var str2 = '158bet33';
+
+console.log(stringNumSum(str1));
+console.log(stringNumSum(str2));
